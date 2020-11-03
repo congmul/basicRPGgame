@@ -34,9 +34,9 @@ BasicRPG.prototype = {
     },
 
     isAlive: function () {
-        if(this.hitPoints <= 0){
+        if (this.hitPoints <= 0) {
             return false;
-        }return true;
+        } return true;
     },
     attack: function (enemyHp) {
         return enemyHp - this.strength;
@@ -88,8 +88,8 @@ confirmBtn.addEventListener("click", function (e) {
     // console.log(userNameIdEl.value);
     document.getElementById('initialScreen').setAttribute("class", "noneDisplay");
     document.getElementById('fightScreen').setAttribute("class", "blockDisplay");
-    
-    if(userNameIdEl.value ===""){
+
+    if (userNameIdEl.value === "") {
         alert("Enter user name");
         return;
     }
@@ -122,23 +122,36 @@ confirmBtn.addEventListener("click", function (e) {
     user01.printStats();
 });
 
-document.getElementById('userAttack').addEventListener("click", function(e){
+document.getElementById('userAttack').addEventListener("click", function (e) {
     e.preventDefault();
-    
+
+    document.getElementById('versusImg').setAttribute("src","./assets/img/attackImg.png");
     level01.hitPoints = user01.attack(level01.hitPoints);
     document.getElementById('enemyhp_fightScreen').textContent = level01.hitPoints;
-    if(!level01.isAlive()){
+    if (!level01.isAlive()) {
         alert('You win!!');
+        return;
     }
+
+    setTimeout(function () {
+        alert(level01.name +" turn");
+        document.getElementById('versusImg').setAttribute("src","./assets/img/versus.png");
+        user01.hitPoints = level01.attack(user01.hitPoints);
+        document.getElementById('hp_fightScreen').textContent = user01.hitPoints;
+        if (!user01.isAlive()) {
+            alert('You loose!!');
+            return;
+        }
+    }, 1000);
 });
 
-document.getElementById('userLevelUp').addEventListener("click", function(e){
+document.getElementById('userLevelUp').addEventListener("click", function (e) {
     e.preventDefault();
     user01.levelUp();
-    
+
     document.getElementById('hp_fightScreen').textContent = user01.hitPoints;
     document.getElementById('strenth_fightScreen').textContent = user01.strength;
-    document.getElementById('level_fightScreen').textContent = user01.age;    
+    document.getElementById('level_fightScreen').textContent = user01.age;
 });
 
 // user01.printStats();
