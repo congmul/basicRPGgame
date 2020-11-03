@@ -1,0 +1,41 @@
+body{
+    text-align: center;
+}
+
+.topMargin{
+    /* margin-left: 400px; */
+    margin-top: 70px;
+}
+.user01{
+    float: left;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+.versus{
+    float: left;
+    margin-top: 50px;
+    align-items: center;
+    /* margin-right: 0px; */
+}
+
+.user02{
+    float: right;
+    margin-top: 50px;
+    /* margin-right: 50px; */
+}
+
+.characterImg{
+    /* float: left; */
+}
+
+.noneDisplay{
+    display: none;
+}
+
+.blockDisplay{
+    display: block;
+}
+
+#fightScreen{
+ padding: 50px 50px 200px 50px;
+}
