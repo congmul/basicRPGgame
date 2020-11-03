@@ -76,7 +76,7 @@ const enemyData = {
         strength: 10,
         hitpoints: 80
     },
-    trol: {
+    troll: {
         level: 2,
         strength: 20,
         hitpoints: 120
@@ -130,6 +130,15 @@ document.getElementById('userAttack').addEventListener("click", function(e){
     if(!level01.isAlive()){
         alert('You win!!');
     }
+});
+
+document.getElementById('userLevelUp').addEventListener("click", function(e){
+    e.preventDefault();
+    user01.levelUp();
+    
+    document.getElementById('hp_fightScreen').textContent = user01.hitPoints;
+    document.getElementById('strenth_fightScreen').textContent = user01.strength;
+    document.getElementById('level_fightScreen').textContent = user01.age;    
 });
 
 // user01.printStats();
