@@ -2,7 +2,7 @@
 
 LINK : https://congmul.github.io/basicRPGgame/
 
-<img src = "./assets/img/" width="600" />
+<img src = "./assets/img/operating.gif" width="600" />
 
 
 ## Tech/framework used: 

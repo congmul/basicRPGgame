@@ -94,7 +94,7 @@ confirmBtn.addEventListener("click", function (e) {
         return;
     }
     switch (charName) {
-        case 'babarian':
+        case 'barbarian':
             user01 = new BasicRPG(userNameIdEl.value, 'Babarian', 1, characterData.babarian.strength, characterData.babarian.hitpoints);
             break;
         case 'necromancer':
@@ -103,7 +103,7 @@ confirmBtn.addEventListener("click", function (e) {
         case 'wizard':
             user01 = new BasicRPG(userNameIdEl.value, 'Wizard', 1, characterData.wizard.strength, characterData.wizard.hitpoints);
             break;
-        case 'demonHunter':
+        case 'demonhunter':
             user01 = new BasicRPG(userNameIdEl.value, 'Demon Hunter', 1, characterData.demonHunter.strength, characterData.demonHunter.hitpoints);
             break;
     }
