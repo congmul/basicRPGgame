@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic RPG Game</title>
+
+    <link rel="stylesheet" href="./assets/style/style.css">
+</head>
+
+<body>
+    <div id="initialScreen">
+        <h1>Select Your character!</h1>
+        <div class='user01'>
+            <img src='./assets/img/barbarian.png' id="characterImg" width="200">
+            <form id="userForm">
+                <input type='text' id="userNameId" placeholder="Enter user name"></input>
+                <select id="characters" name="characters" onchange="selectingChar()">
+                    <option value="barbarian">Barbarian</option>
+                    <option value="necromancer">Necromancer</option>
+                    <option value="wizard">Wizard</option>
+                    <option value="demonHunter">Demon Hunter</option>
+                </select>
+                <button id="confirmBtn">Confirm</button>
+            </form>
+        </div>
+        <div class='versus'>
+            <img src='./assets/img/versus.png' width="200" height="400">
+        </div>
+        <div class='enemy'>
+            <img src='./assets/img/slime.png' width="200">
+            <div>
+                <h3>Level 1 : Slime </h3>
+            </div>
+        </div>
+    </div>
+    
+
+<!-- <div id="fightScreen" class="noneDisplay"> -->
+<div id="fightScreen">
+    <div id="initialScreen">
+        <h1>Select Your character!</h1>
+        <div class='user01'>
+            <img src='./assets/img/barbarian.png' id="characterImg_fightScreen" width="200">
+            <h3 id ="characterName_fightScreen"></h3>
+            <h3>Level : <span id="level_fightScreen"></span></h3>
+            <h3>Strenth : <span id="strenth_fightScreen"></span></h3>
+            <h3>HP : <span id="hp_fightScreen"></span></h3>
+            <form>
+                <button id="userAttack">ATTACK</button>
+                <button id="userLevelUp">LEVEL UP</button>
+            </form>
+        </div>
+        <div class='versus'>
+            <img src='./assets/img/versus.png' width="200" height="500">
+        </div>
+        <div class='enemy'>
+            <img src='./assets/img/slime.png' width="200">
+            <div class="topMargin">
+                <h3 id ="enemyName_fightScreen"></h3>
+                <h3>Level : <span id="enemylevel_fightScreen"></span></h3>
+                <h3>Strenth : <span id="enemystrenth_fightScreen"></span></h3>
+                <h3>HP : <span id="enemyhp_fightScreen"></span></h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src=index.js></script>
+</body>
+</html>
